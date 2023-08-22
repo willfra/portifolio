@@ -3,87 +3,108 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portifólio | William França</title>
+        <title>Portfolio | William França</title>
 
         <link rel="stylesheet" href="./style.css" />
         <link rel="stylesheet" href="./css/responsive.css" />
     </head>
     <body>
         <header>
-            <div class="box-left">
-                <div class="icon-hamburger">
-                    <label class="hamburger">
-                        <input type="checkbox" />
-                        <svg viewBox="0 0 32 32">
-                            <path
-                                class="line line-top-bottom"
-                                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-                            ></path>
-                            <path class="line" d="M7 16 27 16"></path>
-                        </svg>
-                    </label>
+            <div class="content">
+                <div class="box-left">
+                    <div class="icon-hamburger">
+                        <label class="hamburger">
+                            <input type="checkbox" />
+                            <svg viewBox="0 0 32 32">
+                                <path
+                                    class="line line-top-bottom"
+                                    d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+                                ></path>
+                                <path class="line" d="M7 16 27 16"></path>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class="title-logo">
+                        <p><strong>Portfolio Dev</strong></p>
+                    </div>
                 </div>
-                <div class="title-logo">
-                    <p><strong>Portifólio</strong></p>
-                </div>
-            </div>
-            <div class="box-right">
-                <div class="menu">
-                    <ul>
-                        <li>Projetos</li>
-                    </ul>
+                <div class="box-right">
+                    <div class="menu">
+                        <ul>
+                            <li>Projetos</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
         <main>
             <div class="content">
-            <section class="content-perfil">
-                <div class="perfil">
-                    <div class="circle-perfil"></div>
-                    <div class="circle-perfil-blur"></div>
-                </div>
-                <div class="box-perfil">
-                    <div>
-                        <p>Hello, World!</p>
-                        <p>I am <strong>Will</strong></p>
+                <section class="card-perfil"data-tilt data-tilt-max="10" data-tilt-speed="1000" data-tilt-perspective="5000">
+                    <div class="perfil">
+                        <div class="circle-perfil"></div>
+                        <div class="circle-perfil-blur"></div>
                     </div>
-                    <div class="social"></div>
-                </div>
-            </section>
-            <svg
-            class="svg-line-1"
-            xmlns="http://www.w3.org/2000/svg"
-            width="200"
-            height="509"
-            viewBox="0 0 462 509"
-            fill="none"
-        >
-            <path
-                d="M5 508.5V240.88C5 210.922 15.5588 181.923 34.8207 158.978V158.978C59.0233 130.149 94.7377 113.5 132.38 113.5H343.5C406.184 113.5 457 62.6843 457 0V0"
-                stroke="url(#grad)"
-            />
-            <defs>
-                <linearGradient
-                    id="grad"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="100%"
-                >
-                    <stop
-                        offset="0%"
-                        style="stop-color: #025951; stop-opacity: 1"
-                    />
-                    <stop
-                        offset="100%"
-                        style="stop-color: #0cf25d; stop-opacity: 1"
-                    />
-                </linearGradient>
-            </defs>
-        </svg>
-
+                    <div class="text-perfil">
+                        <div>
+                            <p>Hello, World!</p>
+                            <p>I'm <strong>Will</strong></p>
+                            <p>Developer Front-End</p>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <!-- github icon -->
+                        <div class="icon-social" alt="GitHub">
+                            <div class="icon-bg-blur"></div>
+                            <ion-icon name="logo-github">Github</ion-icon>
+                        </div>
+                        <!-- linkedin icon -->
+                        <div class="icon-social" alt="GitHub">
+                            <div class="icon-bg-blur"></div>
+                            <ion-icon name="logo-linkedin">Linkedin</ion-icon>
+                        </div>
+                        <!-- Twitter icon -->
+                        <div class="icon-social" alt="GitHub">
+                            <div class="icon-bg-blur"></div>
+                            <ion-icon name="logo-twitter">Twitter</ion-icon>
+                        </div>
+                    </div>
+                </section>
             </div>
 
+            <section class="line-flex tecnologies">
+                <div class="svg-line">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="436"
+                        viewBox="0 0 28 436"
+                        fill="none"
+                    >
+                        <path
+                            d="M16.5 3C16.5 1.61929 15.3807 0.5 14 0.5C12.6193 0.5 11.5 1.61929 11.5 3L16.5 3ZM0.666649 422C0.666648 429.364 6.63618 435.333 14 435.333C21.3638 435.333 27.3333 429.364 27.3333 422C27.3333 414.636 21.3638 408.667 14 408.667C6.63619 408.667 0.666649 414.636 0.666649 422ZM11.5 3L11.5 422L16.5 422L16.5 3L11.5 3Z"
+                            fill="url(#paint0_linear_60_23)"
+                            fill-opacity="0.93"
+                        />
+                        <defs>
+                            <linearGradient
+                                id="paint0_linear_60_23"
+                                x1="14.5"
+                                y1="3"
+                                x2="14.5"
+                                y2="422"
+                                gradientUnits="userSpaceOnUse"
+                            >
+                                <stop stop-color="#0CF25D" />
+                                <stop
+                                    offset="1"
+                                    stop-color="#0CF25D"
+                                    stop-opacity="0"
+                                />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </section>
 
             <aside>
                 <div class="menu-top"></div>
@@ -94,7 +115,20 @@
 
         <footer></footer>
 
+        <!-- ionic icons import -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <!-- vanilla tilt import  -->
+        <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
+
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="./js/circles.js"></script>
+        <script type="text/javascript" src="./js/circles.js"></script>
     </body>
 </html>
