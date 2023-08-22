@@ -1,4 +1,4 @@
-const colors = ["#0CF25D", "#02735E", "#038C3E"];
+/* const colors = ["#0CF25D", "#02735E", "#038C3E"];
 const numCircles = 5;
 
 function createCircles() {
@@ -54,3 +54,4 @@ function animateCircle(circle) {
 }
 
 createCircles();
+ */

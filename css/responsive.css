@@ -1,5 +1,19 @@
-@media (max-width: 768px) {
+@media (max-width: 780px) {
+
     header .box-right {
         display: none;
+    }
+    .content-perfil {
+        flex-direction: column;
+        margin: 20px;
+        padding: 110px 60px;
+    }
+    .content-perfil .box-perfil p, 
+    .content-perfil .box-perfil p:first-child {
+        font-size: 2.4rem;
+    }
+    .svg-line-1 {
+        margin-top: 650px;
+        margin-left: -70px;
     }
 }

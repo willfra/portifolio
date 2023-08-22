@@ -16,5 +16,18 @@
     --color-3: #02735e;
     --color-4: #038c3e;
     --primary-color: #0cf25d;
-    --secondary-color: #72009C;
+    --secondary-color: #72009c;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000; 
+}
+
+::-webkit-scrollbar-track, 
+::-webkit-scrollbar-track-piece {
+    background-color: #001d28;
 }
