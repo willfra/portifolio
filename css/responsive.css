@@ -3,15 +3,18 @@
     header .box-right {
         display: none;
     }
+    .section-perfil {
+        margin-bottom: 100px;
+    }
     .card-perfil {
         flex-direction: column;
         margin: 10px;
-        padding: 60px 30px;
+        padding: 40px 20px;
         padding-bottom: 30px;
         margin-top: 0;
         margin-bottom: 0px;
     }
-    .card-perfil .box-perfil p, 
+    .card-perfil .box-perfil p,
     .card-perfil .box-perfil p:first-child {
         font-size: 2.4rem;
     }
@@ -27,8 +30,5 @@
     }
     .card-perfil .text-perfil {
         min-width: 0;
-    }
-    header .content {
-        
     }
 }
