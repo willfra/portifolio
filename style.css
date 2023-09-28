@@ -19,12 +19,9 @@ body {
     z-index: 1;
     overflow-x: hidden;
 }
-section {
-    height: calc(100vh - 70px);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ion-icon {
+    font-size: 2rem;
+    color: white;
 }
 header {
     display: flex;
@@ -193,8 +190,6 @@ main {
     backdrop-filter: blur(50px);
     position: relative;
     z-index: 5;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
 }
 .perfil {
     display: flex;
@@ -323,44 +318,57 @@ main {
     z-index: 5;
     position: relative;
 }
-.section-tecnologies .content {
+.section-tecnologies 
+.content {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 30px
 }
-.section-tecnologies .content .center{
+.section-tecnologies 
+.content .center{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
-.section-tecnologies .text {
+.section-tecnologies 
+.text {
     text-align: center;
 }
-.section-tecnologies h2 {
+.section-tecnologies 
+h2 {
     color: var(--primary-color);
 }
-.section-tecnologies .icons {
+.section-tecnologies 
+.icons {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    margin: 10px;
 }
-.section-tecnologies .icons .icon {
+.section-tecnologies 
+.icons .icon {
     width: 70px;
     height: 70px;
     border-radius: 10px;
     background-color: var(--background-box);
     border: var(--border);
     padding: 15px;
+    cursor: pointer;
 }
-.section-tecnologies .icons .icon ion-icon {
+.section-tecnologies
+.icons .icon ion-icon {
     width: 100%;
     height: 100%;
     font-size: 100%;
+    transition: transform 0.3s;
+}
+.icons .icon:hover ion-icon {
+    transform: scale(1.1);
 }
 
 /* MENU LATERAL MOBILE */
@@ -378,7 +386,3 @@ aside .ative {
     display: none;
 }
 
-ion-icon {
-    font-size: 2rem;
-    color: white;
-}
