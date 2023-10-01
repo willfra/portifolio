@@ -63,16 +63,34 @@ const cardPerfilWidth = cardPerfil.offsetWidth;
 lineBox.style.width = cardPerfilWidth + "px";
 
 let lastScrollPosition = 0;
-const header = document.querySelector("header");
 
-window.addEventListener("scroll", function () {
-    const currentScrollPosition = window.scrollY;
 
-    if (currentScrollPosition < lastScrollPosition) {
-        header.style.marginTop = "0px";
+
+
+
+
+const header = document.querySelector('header');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const headerHeight = header.offsetHeight;
+
+    if (scrollTop > lastScrollTop) {
+        // Scroll para baixo
+        header.classList.remove('show-style-header');
+        header.classList.remove('show-header');
     } else {
-        header.style.marginTop = "-100px";
+        // Scroll para cima
+        header.classList.add('show-style-header');
+        header.classList.add('show-header');
     }
 
-    lastScrollPosition = currentScrollPosition;
+    // Remove a classe "show" quando o cabeçalho estiver perto do topo do corpo
+    if (scrollTop < headerHeight) {
+        header.classList.remove('show-style-header');
+
+    }
+
+    lastScrollTop = scrollTop;
 });
