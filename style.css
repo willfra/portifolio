@@ -56,7 +56,6 @@ header {
     border-bottom: solid 1px #002c28;
     transition: margin-top 0.3s;
     overflow: hidden;
-    margin-top: -100px;
 }
 header .content {
     max-width: 900px;
@@ -275,7 +274,6 @@ main {
 .card-perfil .text-perfil p:nth-child(3) {
     color: #ffffff;
     font-size: 1rem;
-    margin-top: 10px;
     font-weight: 300;
 }
 
@@ -303,17 +301,16 @@ main {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: var(--color-2);
-    filter: blur(20px);
-    opacity: 100%;
-    transition: all 0.7s;
+    background-color: var(--background-box);
+    filter: blur(-27px);
+    transition: all 0.2s;
     position: absolute;
     z-index: 1;
+    border: var(--border);
 }
 .icon:hover .icon-bg-blur {
-    width: 70px;
-    height: 70px;
-    opacity: 40%;
+    width: 65px;
+    height: 65px;
     background-color: var(--color-3);
 }
 .icon-social ion-icon {
@@ -331,13 +328,13 @@ main {
 }
 
 .line-y {
-    width: 5px;
+    width: 1px;
     height: 100%;
     border-radius: 20px;
     position: absolute;
     background: linear-gradient(
         to bottom,
-        var(--primary-color),
+        var(--color-2),
         var(--color-3)
     );
 }
