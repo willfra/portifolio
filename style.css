@@ -2,10 +2,10 @@
 
 :root {
     --background: #002533;
-    --color-2: #025951;
-    --color-3: #02735e;
+    --color-2: #0f5750;
+    --color-3: #248d7a;
     --color-4: #038c3e;
-    --primary-color: #0cf25d;
+    --primary-color: #0bf45d;
     --secondary-color: #72009c;
     --background-box: #00000036;
     --border: solid 1px var(--color-2);
@@ -18,22 +18,38 @@ body {
     color: #ffffff;
     z-index: 1;
     overflow-x: hidden;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    font-size: 0.87rem;
+    line-height: 1.5;
+    min-height: 100vh;
 }
+.body-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.body-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 2%;
+}
+
 ion-icon {
     font-size: 2rem;
     color: white;
 }
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     width: 100%;
-    padding: 7px;
+    padding: 1rem;
     box-shadow: 0 8px 32px 0 #00000073;
     -webkit-backdrop-filter: blur(100px);
     backdrop-filter: blur(30px);
     z-index: 6;
-    position: sticky;
+    position: fixed;
     top: 0px;
     flex-wrap: nowrap;
     background-color: var(--background-box);
@@ -166,17 +182,13 @@ main {
     height: 100%;
 }
 
-.img-perfil {
-    width: 200px;
-    height: 200px;
-    background-size: contain;
-    border-radius: 50%;
+.section-perfil {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 5;
 }
+
 .card-perfil {
     display: flex;
     align-items: center;
@@ -191,13 +203,23 @@ main {
     position: relative;
     z-index: 5;
 }
+
+.img-perfil {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
 .perfil {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    transform: translateZ(20px);
 }
 .circle-perfil {
     width: 150px;
@@ -208,7 +230,6 @@ main {
     background-position: center;
     align-items: center;
     justify-content: center;
-    position: relative;
     z-index: 5;
     border: solid 2px var(--primary-color);
 }
@@ -279,6 +300,7 @@ main {
     width: 70px;
     height: 70px;
     opacity: 90%;
+    background-color: var(--color-3);
 }
 .icon-social ion-icon {
     font-size: 2rem;
@@ -318,30 +340,31 @@ main {
     z-index: 5;
     position: relative;
 }
-.section-tecnologies 
-.content {
+.section-tecnologies {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 30px
+    justify-content: center;
 }
-.section-tecnologies 
-.content .center{
+
+.section-tecnologies .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.section-tecnologies .content .center {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
-.section-tecnologies 
-.text {
+.section-tecnologies .text {
     text-align: center;
 }
-.section-tecnologies 
-h2 {
+.section-tecnologies h2 {
     color: var(--primary-color);
 }
-.section-tecnologies 
-.icons {
+.section-tecnologies .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -350,8 +373,7 @@ h2 {
     flex-wrap: wrap;
     margin: 10px;
 }
-.section-tecnologies 
-.icons .icon {
+.section-tecnologies .icons .icon {
     width: 70px;
     height: 70px;
     border-radius: 10px;
@@ -360,8 +382,7 @@ h2 {
     padding: 15px;
     cursor: pointer;
 }
-.section-tecnologies
-.icons .icon ion-icon {
+.section-tecnologies .icons .icon ion-icon {
     width: 100%;
     height: 100%;
     font-size: 100%;
@@ -385,4 +406,3 @@ aside {
 aside .ative {
     display: none;
 }
-

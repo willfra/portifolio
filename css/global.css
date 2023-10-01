@@ -11,26 +11,57 @@
     box-sizing: border-box;
     font-display: swap;
 }
-:root {
-    --background: #002533;
-    --color-2: #025951;
-    --color-3: #02735e;
-    --color-4: #038c3e;
-    --primary-color: #0cf25d;
-    --secondary-color: #72009c;
-}
 
 ::-webkit-scrollbar {
     width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #000000; 
+    background-color: #000000;
 }
 
-::-webkit-scrollbar-track, 
+::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-piece {
     background-color: #001d28;
 }
 
+.dflexp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+
+
+/* scroll animation */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursor-box {
+    width: 50em;
+    height: 50em;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: inset 0px 0px 200px 75px rgba(33, 168, 51, 0.295);
+    filter: blur(200px);
+}

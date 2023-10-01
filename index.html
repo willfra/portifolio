@@ -11,9 +11,19 @@
 
         <link rel="stylesheet" href="./style.css" />
         <link rel="stylesheet" href="./css/responsive.css" />
+        <script defer src="./js/app.js"></script>
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
     </head>
-    <body>
-        <header>
+    <body id="main">
+        <div class="body-bg">
+            <img src="./img/bgportifolio.webp" alt="">
+        </div>
+        <div class="cursor-box" id="spotlight">
+        </div>
+        <header class="dflexp">
             <div class="content">
                 <div class="box-left">
                     <div class="icon-hamburger">
@@ -42,11 +52,14 @@
             </div>
         </header>
         <main>
-            <section class="section-perfil">
-                <div class="content">
+            <section class="section-perfil display-flex">
+                <div class="content display-flex">
                     <div
                         class="card-perfil"
                         data-tilt
+                        data-tilt-max="2"
+                        data-tilt-speed="400"
+                        data-tilt-axis="x"
                     >
                         <div class="perfil">
                             <div class="circle-perfil"></div>
@@ -103,7 +116,7 @@
                             <p>My journey</p>
                         </div>
                         <!-- icones tec -->
-                        <div class="icons" >
+                        <div class="icons">
                             <div class="icon html5" data-tilt>
                                 <ion-icon name="logo-html5"></ion-icon>
                             </div>
@@ -118,11 +131,13 @@
                             </div>
                         </div>
                         <div>
-                            
                             <!-- line space -->
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="section-next">
+                <h1>Hello</h1>
             </section>
 
             <aside>
@@ -135,7 +150,7 @@
         <footer></footer>
 
         <!-- Switcher Lang import -->
-        <script type="text/javascript" src="./js/switcher-lang.js"></script>
+        <!-- <script type="text/javascript" src="./js/switcher-lang.js"></script> -->
 
         <!-- ionic icons import -->
         <script
@@ -144,5 +159,11 @@
         ></script>
         <!-- vanilla tilt import  -->
         <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
+        <!--         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script> -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     </body>
 </html>
