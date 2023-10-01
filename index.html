@@ -18,11 +18,8 @@
         />
     </head>
     <body id="main">
-        <div class="body-bg">
-            <img src="./img/bgportifolio.webp" alt="">
         </div>
-        <div class="cursor-box" id="spotlight">
-        </div>
+        <div class="cursor-box" id="spotlight"></div>
         <header class="dflexp">
             <div class="content">
                 <div class="box-left">
@@ -52,10 +49,14 @@
             </div>
         </header>
         <main>
-            <section class="section-perfil display-flex">
-                <div class="content display-flex">
+            <section class="section-perfil dflexp">
+                <div class="section-bg">
+                    <img src="./img/bgportifolio.webp" alt="" srcset="">
+                </div>
+                <div class="content dflexp">
                     <div
                         class="card-perfil"
+                        id="card-perfil"
                         data-tilt
                         data-tilt-max="2"
                         data-tilt-speed="400"
@@ -92,21 +93,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="line-y">
-                        <div></div>
+                    <div class="line-box">
+                        <div class="line-y">
+                        </div>
                     </div>
+
                 </div>
             </section>
 
             <section class="section-tecnologies">
+                <div class="section-bg">
+                    <img src="" alt="" srcset="">
+                </div>
                 <div class="content">
                     <!-- icone -->
-                    <div class="icon">
+                    <div class="icon" id="icon-tec">
                         <ion-icon
                             class="icon"
                             name="code-slash-outline"
                         ></ion-icon>
-                        <div class="icon-bg-blur"></div>
+                        <div class="icon-bg-blur-section"></div>
                     </div>
 
                     <div class="center">
@@ -129,16 +135,25 @@
                             <div class="icon angular" data-tilt>
                                 <ion-icon name="logo-angular"></ion-icon>
                             </div>
-                        </div>
-                        <div>
-                            <!-- line space -->
+                            <div class="icon angular" data-tilt>
+                                <ion-icon name="logo-angular"></ion-icon>
+                            </div>
+                            <div class="icon angular" data-tilt>
+                                <ion-icon name="logo-angular"></ion-icon>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="section-next">
                 <h1>Hello</h1>
+
+                <div class="linetest"></div>
+
+
+
             </section>
+            
 
             <aside>
                 <div class="menu-top"></div>
@@ -159,11 +174,6 @@
         ></script>
         <!-- vanilla tilt import  -->
         <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
-        <!--         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script> -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
     </body>
 </html>

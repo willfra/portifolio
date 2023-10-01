@@ -3,7 +3,7 @@
 :root {
     --background: #002533;
     --color-2: #0f5750;
-    --color-3: #248d7a;
+    --color-3: #30bba1;
     --color-4: #038c3e;
     --primary-color: #0bf45d;
     --secondary-color: #72009c;
@@ -25,16 +25,17 @@ body {
     line-height: 1.5;
     min-height: 100vh;
 }
-.body-bg {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-}
-.body-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 2%;
+
+.cursor-box {
+    width: 20em;
+    height: 20em;
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: inset 0px 0px 200px 75px var(--primary-color);
+    filter: blur(150px);
+    opacity: 20%;
 }
 
 ion-icon {
@@ -42,7 +43,6 @@ ion-icon {
     color: white;
 }
 header {
-
     width: 100%;
     padding: 1rem;
     box-shadow: 0 8px 32px 0 #00000073;
@@ -181,6 +181,17 @@ main {
     width: 100%;
     height: 100%;
 }
+.section-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 5%;
+}
+.section-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .section-perfil {
     width: 100vw;
@@ -272,7 +283,7 @@ main {
     flex-direction: column;
     border-left: solid 1px var(--color-2);
     height: 100%;
-    padding-left: 40px;
+    padding-left: 50px;
     gap: 30px;
 }
 .social .icon-social {
@@ -291,7 +302,7 @@ main {
     border-radius: 50%;
     background-color: var(--color-2);
     filter: blur(20px);
-    opacity: 60%;
+    opacity: 100%;
     transition: all 0.7s;
     position: absolute;
     z-index: 1;
@@ -299,7 +310,7 @@ main {
 .icon:hover .icon-bg-blur {
     width: 70px;
     height: 70px;
-    opacity: 90%;
+    opacity: 40%;
     background-color: var(--color-3);
 }
 .icon-social ion-icon {
@@ -310,23 +321,22 @@ main {
 .icon-social:hover ion-icon {
     color: #ffffff;
 }
-.line-y {
+.line-box {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
+    align-items: center;
+    justify-content: flex-start;
 }
-.line-y div {
+
+.line-y {
     width: 5px;
-    height: 140px;
+    height: 100%;
+    margin-left: -50px;
     border-radius: 20px;
-    margin-top: -10px;
     position: absolute;
     background: linear-gradient(
         to bottom,
         var(--primary-color),
-        #03544d8a 70%,
-        transparent 95%
+        var(--color-3)
     );
 }
 
@@ -336,9 +346,10 @@ main {
     justify-content: center;
     border-radius: 50%;
     cursor: unset;
-    transform: translateZ(50px);
     z-index: 5;
     position: relative;
+    width: 50px;
+    height: 50px;
 }
 .section-tecnologies {
     display: flex;
@@ -358,12 +369,27 @@ main {
     align-items: center;
     gap: 30px;
 }
+.icon-bg-blur-section {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-3);
+    filter: blur(20px);
+    opacity: 80%;
+    transition: all 0.7s;
+    position: absolute;
+    z-index: 1;
+}
+
 .section-tecnologies .text {
     text-align: center;
+    font-size: 2rem;
+    font-size: calc(50% + 1rem);
 }
 .section-tecnologies h2 {
     color: var(--primary-color);
 }
+
 .section-tecnologies .icons {
     display: flex;
     flex-direction: row;
@@ -371,7 +397,7 @@ main {
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: 20px;
 }
 .section-tecnologies .icons .icon {
     width: 70px;

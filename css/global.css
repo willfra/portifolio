@@ -55,13 +55,8 @@ section {
     justify-content: center;
 }
 
-.cursor-box {
-    width: 50em;
-    height: 50em;
-    position: absolute;
-    z-index: 0;
-    border-radius: 50%;
-    border: 0;
-    box-shadow: inset 0px 0px 200px 75px rgba(33, 168, 51, 0.295);
-    filter: blur(200px);
+
+.linetest {
+    height: 100px;
+    
 }
