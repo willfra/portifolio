@@ -54,6 +54,9 @@ header {
     flex-wrap: nowrap;
     background-color: var(--background-box);
     border-bottom: solid 1px #002c28;
+    transition: margin-top 0.3s;
+    overflow: hidden;
+    margin-top: -100px;
 }
 header .content {
     max-width: 900px;
@@ -324,13 +327,12 @@ main {
 .line-box {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .line-y {
     width: 5px;
     height: 100%;
-    margin-left: -50px;
     border-radius: 20px;
     position: absolute;
     background: linear-gradient(
