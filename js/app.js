@@ -84,11 +84,13 @@ window.addEventListener('scroll', function() {
         // Scroll para cima
         header.classList.add('show-style-header');
         header.classList.add('show-header');
+        console.log(header.classList)
     }
 
     // Remove a classe "show" quando o cabeçalho estiver perto do topo do corpo
     if (scrollTop < headerHeight) {
         header.classList.remove('show-style-header');
+        console.log(scrollTop)
 
     }
 
