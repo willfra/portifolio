@@ -22,7 +22,7 @@ myObserver.observe(lastOne); */
 
 /* efeito mouse */
 
-const blurElement = document.getElementById("spotlight");
+/* const blurElement = document.getElementById("spotlight");
 
 document.addEventListener("mousemove", (e) => {
     const mouseX = e.clientX + window.scrollX;
@@ -62,7 +62,7 @@ const cardPerfilWidth = cardPerfil.offsetWidth;
 
 lineBox.style.width = cardPerfilWidth + "px";
 
-let lastScrollPosition = 0;
+let lastScrollPosition = 0; */
 
 
 
