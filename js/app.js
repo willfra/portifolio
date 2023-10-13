@@ -30,7 +30,7 @@ document.addEventListener("mousemove", (e) => {
 
     blurElement.style.left = mouseX - blurElement.clientWidth / 2 + "px";
     blurElement.style.top = mouseY - blurElement.clientHeight / 2 + "px";
-});
+}); */
 
 function calcularDistancia(element1, element2) {
     const rect1 = element1.getBoundingClientRect();
@@ -62,7 +62,7 @@ const cardPerfilWidth = cardPerfil.offsetWidth;
 
 lineBox.style.width = cardPerfilWidth + "px";
 
-let lastScrollPosition = 0; */
+let lastScrollPosition = 0; 
 
 
 
