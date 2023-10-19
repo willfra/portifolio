@@ -22,7 +22,7 @@ myObserver.observe(lastOne); */
 
 /* efeito mouse */
 
-/* const blurElement = document.getElementById("spotlight");
+const blurElement = document.getElementById("spotlight");
 
 document.addEventListener("mousemove", (e) => {
     const mouseX = e.clientX + window.scrollX;
@@ -30,7 +30,7 @@ document.addEventListener("mousemove", (e) => {
 
     blurElement.style.left = mouseX - blurElement.clientWidth / 2 + "px";
     blurElement.style.top = mouseY - blurElement.clientHeight / 2 + "px";
-}); */
+});
 
 function calcularDistancia(element1, element2) {
     const rect1 = element1.getBoundingClientRect();
@@ -62,37 +62,59 @@ const cardPerfilWidth = cardPerfil.offsetWidth;
 
 lineBox.style.width = cardPerfilWidth + "px";
 
-let lastScrollPosition = 0; 
+let lastScrollPosition = 0;
 
-
-
-
-
-
-const header = document.querySelector('header');
+const header = document.querySelector("header");
 let lastScrollTop = 0;
 
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function () {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const headerHeight = header.offsetHeight;
 
     if (scrollTop > lastScrollTop) {
         // Scroll para baixo
-        header.classList.remove('show-style-header');
-        header.classList.remove('show-header');
+        header.classList.remove("show-style-header");
+        header.classList.remove("show-header");
     } else {
         // Scroll para cima
-        header.classList.add('show-style-header');
-        header.classList.add('show-header');
-        console.log(header.classList)
+        header.classList.add("show-style-header");
+        header.classList.add("show-header");
+        console.log(header.classList);
     }
 
     // Remove a classe "show" quando o cabeçalho estiver perto do topo do corpo
     if (scrollTop < headerHeight) {
-        header.classList.remove('show-style-header');
-        console.log(scrollTop)
-
+        header.classList.remove("show-style-header");
+        console.log(scrollTop);
     }
 
     lastScrollTop = scrollTop;
+});
+
+// Selecione o checkbox e o elemento aside
+var checkbox = document.getElementById("hamburger");
+var aside = document.querySelector(".aside");
+var closebutton = document.querySelector(".closebutton");
+var body = document.querySelector("body");
+
+// Adicione um ouvinte de eventos ao checkbox
+checkbox.addEventListener("click", function () {
+    // Verifique se o checkbox está marcado
+    if (checkbox.checked) {
+        // Adicione a classe "ative" ao elemento aside
+        aside.classList.add("ative");
+        closebutton.style.left = "0";
+        body.style.overflowY = "hidden";
+    } else {
+        // Remova a classe "ative" do elemento aside
+        aside.classList.remove("ative");
+        closebutton.style.left = "-1000px";
+        body.style.overflowY = "auto";
+    }
+});
+closebutton.addEventListener("click", function() {
+    aside.classList.remove("ative");
+    closebutton.style.left = "-1000px";
+    checkbox.checked = false;
+    body.style.overflowY = "auto";
 });
