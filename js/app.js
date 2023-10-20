@@ -1,25 +1,3 @@
-/* const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersection) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
- */
-
-/* const lastOne = document.querySelector(".section-next");
-const myObserver = new IntersectionObserver((entries) => {
-    console.log(entries);
-});
-
-myObserver.observe(lastOne); */
-
 /* efeito mouse */
 
 const blurElement = document.getElementById("spotlight");
@@ -91,30 +69,30 @@ window.addEventListener("scroll", function () {
     lastScrollTop = scrollTop;
 });
 
-// Selecione o checkbox e o elemento aside
-var checkbox = document.getElementById("hamburger");
-var aside = document.querySelector(".aside");
-var closebutton = document.querySelector(".closebutton");
-var body = document.querySelector("body");
+// ASIDE JS ----------------------------------------
 
-// Adicione um ouvinte de eventos ao checkbox
+const checkbox = document.getElementById("hamburger");
+const aside = document.querySelector(".aside");
+const closebutton = document.querySelector(".closebutton");
+const body = document.querySelector("body");
+
 checkbox.addEventListener("click", function () {
-    // Verifique se o checkbox está marcado
     if (checkbox.checked) {
-        // Adicione a classe "ative" ao elemento aside
         aside.classList.add("ative");
-        closebutton.style.left = "0";
-        body.style.overflowY = "hidden";
+        closebutton.style.right = "0";
+        header.classList.add("aside-hide");
+        /* body.style.overflowY = "hidden"; */
     } else {
-        // Remova a classe "ative" do elemento aside
         aside.classList.remove("ative");
-        closebutton.style.left = "-1000px";
-        body.style.overflowY = "auto";
+        closebutton.style.right = "-2000px";
+        header.classList.remove("aside-hide");
+        /* body.style.overflowY = "auto"; */
     }
 });
-closebutton.addEventListener("click", function() {
+closebutton.addEventListener("click", function () {
     aside.classList.remove("ative");
-    closebutton.style.left = "-1000px";
+    header.classList.remove("aside-hide");
+    closebutton.style.right = "-2000px";
     checkbox.checked = false;
-    body.style.overflowY = "auto";
+    /* body.style.overflowY = "auto"; */
 });

@@ -54,7 +54,8 @@ header {
     border-color: #002c28;
     transition: top 0.3s;
 }
-header.show-style-header {
+header.show-style-header,
+.aside {
     background-color: #0025337c;
     border-bottom: solid 1px #002c28;
     box-shadow: 0 2px 32px 0 #00000073;
@@ -67,6 +68,12 @@ header .content {
     max-width: 900px;
     justify-content: space-between;
     flex-direction: row;
+}
+
+header.aside-hide {
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
 }
 .content {
     max-width: 1280px;
@@ -127,7 +134,7 @@ header .content {
 
 .box-left {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 20px;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -428,31 +435,27 @@ main {
 }
 
 /* MENU LATERAL MOBILE */
-aside {
-    display: flex;
-    flex-direction: row;
-}
 
 .aside {
     display: flex;
-    left: -1000px;
+    left: -2000px;
     width: 500px;
     height: 100%;
     z-index: 9;
-    background-color: white;
-    position: absolute;
+/*  background-color: white; */
+    position: fixed;
     top: 0;
-    box-shadow: 2px 2px 50px #000000;
+/*  box-shadow: 2px 2px 50px #000000; */
     transition: all 0.5s;
 }
 .aside.ative {
     left: 0px;
 }
 .closebutton {
-    left: -1000px;
-    width: 100%;
+    right: -2000px;
+    width: calc(100% - 500px);
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 8;
     top: 0;
     cursor: pointer;
@@ -460,5 +463,3 @@ aside {
     padding: 50px;
     background-color: #00000054;
 }
-
-
