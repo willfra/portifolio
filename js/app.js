@@ -1,6 +1,6 @@
 /* efeito mouse */
 
-const blurElement = document.getElementById("spotlight");
+/* const blurElement = document.getElementById("spotlight");
 
 document.addEventListener("mousemove", (e) => {
     const mouseX = e.clientX + window.scrollX;
@@ -8,7 +8,7 @@ document.addEventListener("mousemove", (e) => {
 
     blurElement.style.left = mouseX - blurElement.clientWidth / 2 + "px";
     blurElement.style.top = mouseY - blurElement.clientHeight / 2 + "px";
-});
+}); */
 
 function calcularDistancia(element1, element2) {
     const rect1 = element1.getBoundingClientRect();
