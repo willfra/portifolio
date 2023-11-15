@@ -99,3 +99,24 @@ closebutton.addEventListener("click", function () {
     checkbox.checked = false;
     /* body.style.overflowY = "auto"; */
 });
+
+// PROJETOS IFRAME ----------------------------------------------------------------
+
+const projeto1Iframe = document.getElementById("projeto1");
+const projeto2Iframe = document.getElementById("projeto2");
+
+function loadProject(projectId, projectURL) {
+    const iframe = document.getElementById("iframe");
+    iframe.style.display = "none";
+
+    const projetoDiv = document.getElementById(projectId);
+    iframe.src = projectURL;
+    iframe.style.display = "block";
+}
+
+/* button active vscode */
+const projetoButtonActive = document.querySelectorAll(".projects-button");
+
+projetoButtonActive.addEventListener("click", function () {
+    projetoButtonActive.classList.add("red");
+});
