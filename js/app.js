@@ -79,26 +79,25 @@ const body = document.querySelector("body");
 checkbox.addEventListener("click", function () {
     if (checkbox.checked) {
         aside.classList.add("ative");
-        closebutton.style.opacity = "1";
-        closebutton.style.display = "unset";
         header.classList.add("aside-hide");
-        /* body.style.overflowY = "hidden"; */
+        body.style.overflowY = "hidden";
     } else {
         aside.classList.remove("ative");
-        closebutton.style.opacity = "0";
-        closebutton.style.display = "none";
         header.classList.remove("aside-hide");
-        /* body.style.overflowY = "auto"; */
+        body.style.overflowY = "auto";
     }
 });
-closebutton.addEventListener("click", function () {
+
+
+
+/* closebutton.addEventListener("click", function () {
     aside.classList.remove("ative");
     header.classList.remove("aside-hide");
     closebutton.style.opacity = "0";
     closebutton.style.display = "none";
     checkbox.checked = false;
-    /* body.style.overflowY = "auto"; */
-});
+    /* body.style.overflowY = "auto";
+}); */
 
 // PROJETOS IFRAME ----------------------------------------------------------------
 
